@@ -8,6 +8,9 @@ alias title='printf "\033]0;%s\007"'
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
+
+#import the colors
+
 cyan=$(tput setaf 6)
 yellow=$(tput setaf 3)
 magenta=$(tput setaf 5)
@@ -18,4 +21,3 @@ green=$(tput setaf 10)
 export PS1="\r\n\[$cyan\]\w\n\$(date +%r)\r\n\[$green\]\u|\[$magenta\]\W\[$yellow\]\$(parse_git_branch)\[$megenta\]:\[$reset\]"
 export CLICOLOR=1
 alias acti="a=$(pwd) && cd && source virtual/.env/bin/activate && echo $a"
-alias run="./run_scr.bash"
