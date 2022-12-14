@@ -18,6 +18,6 @@ reset=$(tput sgr 0)
 red=$(tput setaf 1)
 green=$(tput setaf 10)
 
-export PS1="\r\n\[$cyan\]\w\n\$(date +%r)\r\n\[$green\]\u@\h|\[$magenta\]\W\[$yellow\]\$(parse_git_branch)\[$megenta\]:\[$reset\]"
+export PS1="\r\n\[$cyan\]\w\n\$(date+%r)\r\n\[$green\]\u\[$yellow\]@\[$gray\]\h|\[$magenta\]\W\[$yellow\]\$(parse_git_branch)\[$megenta\]$\[$reset\]"
 export CLICOLOR=1
 alias activate="a=$(pwd) && cd && source ~/.env/bin/activate && echo $a"
