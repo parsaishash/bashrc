@@ -17,6 +17,7 @@ magenta=$(tput setaf 5)
 reset=$(tput sgr 0)
 red=$(tput setaf 1)
 green=$(tput setaf 10)
+gray=$(tput setaf 12)
 
 export PS1="\r\n\[$cyan\]\w\n\$(date+%r)\r\n\[$green\]\u\[$yellow\]@\[$gray\]\h|\[$magenta\]\W\[$yellow\]\$(parse_git_branch)\[$megenta\]$\[$reset\]"
 export CLICOLOR=1
